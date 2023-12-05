@@ -38,23 +38,7 @@ print()
 print('Can you sign \"' + msg_to_sign + '\"?')
 print()
 
-'''
 
-found = False
-r = 125
-for s in range(1,n):
-    input_sig = (public_key, r, s)
-    if verify_signature(msg_to_sign, input_sig, C, base_point, n, public_key):
-        print('Correct!!!')
-        print(f"Found valid signature (r, s): ({r}, {s})")
-        found = True
-        break
-
-if not found:
-    print('Incorrect signature...')
-
-
-'''
 r = int(input('r: '))
 s = int(input('s: '))
 input_sig = (public_key, r, s)
